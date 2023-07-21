@@ -35,4 +35,6 @@ int lomuto_partition(int *array, int low, int high, size_t size);
 
 void swa(int *a, int *b, size_t size, int *array);
 
+void shell_sort(int *array, size_t size);
+
 #endif
