@@ -4,10 +4,10 @@
  * merge - Merges two subarrays into one sorted array
  * @array: array
  * @size: The total size
- * @left: The left subarray
- * @left_size: The size of the left
- * @right: The right subarray
- * @right_size: The size of the right subarray
+ * @l: The left subarray
+ * @l_s: The size of the left
+ * @r: The right subarray
+ * @r_s: The size of the right subarray
  * Return: none
  */
 
