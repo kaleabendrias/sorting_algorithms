@@ -56,10 +56,10 @@ int lomuto_partition(int *array, int low, int high, size_t size)
 		if (array[j] < pivot)
 		{
 			i++;
-			swap(&array[i], &array[j], size, array);
+			swa(&array[i], &array[j], size, array);
 		}
 	}
-	swap(&array[i + 1], &array[high], size, array);
+	swa(&array[i + 1], &array[high], size, array);
 
 	return (i + 1);
 }
@@ -72,7 +72,7 @@ int lomuto_partition(int *array, int low, int high, size_t size)
  * Return: none
  */
 
-void swap(int *a, int *b, size_t size, int *array)
+void swa(int *a, int *b, size_t size, int *array)
 {
 	int temp = *a;
 	*a = *b;
