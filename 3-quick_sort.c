@@ -65,9 +65,11 @@ int lomuto_partition(int *array, int low, int high, size_t size)
 }
 
 /**
- * swap - swaps two integers
+ * swa - swaps two integers
  * @a: first integer
  * @b: second integer
+ * @size: size
+ * @array: array
  *
  * Return: none
  */
