@@ -4,6 +4,7 @@
  * swap - swaps places of two int
  * @fir: first elemnt
  * @sec: second elem
+ * Return: none
  */
 void swap(int *fir, int *sec)
 {
@@ -16,6 +17,7 @@ void swap(int *fir, int *sec)
  * bubble_sort - sorts an array of integers in ascending order using the Bubble
  * @array: array
  * @size: size of arr
+ * Return: none
  */
 void bubble_sort(int *array, size_t size)
 {
