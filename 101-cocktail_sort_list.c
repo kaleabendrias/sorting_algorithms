@@ -1,62 +1,47 @@
 #include "sort.h"
 
-void swap_node(listint_t *p, listint_t *c, listint_t **list)
+/**
+ * swap_nodes - function to swap two nodes of doubly linked list
+ * @list: the doubly linked list
+ * @nodeA: the first node
+ * @nodeB: the second node
+ */
+void swap_nodes(listint_t **list, listint_t *nodeA, listint_t *nodeB)
 {
-	if (!(p->prev))
-	{
-		p->next = c->next;
-		if (c->next)
-			c->next->prev = p;
-		c->next = p;
-		c->prev = NULL;
-		p->prev = c;
-		*list = c;
-	}
-	else
-	{
-		c->prev->next = c->next;
-		if (c->next)
-			c->next->prev = c->prev;
-		p->prev->next = c;
-		c->prev = p->prev;
-		p->prev = c;
-		c->next = p;
-	}
+	if (nodeA == NULL || nodeB == NULL)
+		return;
+
+	if (nodeA->prev != NULL)
+		nodeA->prev->next = nodeB;
+	if (nodeB->next != NULL)
+		nodeB->next->prev = nodeA;
+
+	nodeA->next = nodeB->next;
+	nodeB->prev = nodeA->prev;
+	nodeA->prev = nodeB;
+	nodeB->next = nodeA;
+
+	if (nodeB->prev == NULL)
+		*list = nodeB;
 }
 
+/**
+ * cocktail_sort_list - sorts a doubly linked list using the cocktail
+ * sorting algorithm
+ * @list: the doubly linked list to sort
+ */
 void cocktail_sort_list(listint_t **list)
 {
 	int swapped;
-	listint_t *c, *nextnode;
+	listint_t *left, *right;
 
 	if (list == NULL || *list == NULL || (*list)->next == NULL)
 		return;
 
-	c = *list;
 	do {
 		swapped = 0;
-		while (c->next)
+		for (left = *list; left->next != NULL; left = left->next)
 		{
-			nextnode = c->next;
-			if (nextnode && c->n > nextnode->n)
-			{
-				swap_node(c, nextnode, list);
-				swapped = 1;
-				print_list(*list);
-			}
-			c = c->next;
+			right = 
 		}
-		c = c->prev;
-		while (c->prev)
-		{
-			nextnode = c->prev;
-			if (nextnode && c->n < nextnode->n)
-			{
-				swap_node(nextnode, c, lisit);
-				swapped = 1;
-				print_list(*list);
-			}
-			c = c->next;
-		}
-	} while (swapped);
 }
