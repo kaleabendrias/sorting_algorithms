@@ -43,4 +43,8 @@ void counting_sort(int *array, size_t size);
 
 void merge_sort(int *array, size_t size);
 
+void quicksort_helper(int *array, int first, int last, size_t size);
+int partition(int *array, int first, int last, size_t size);
+void swap(int *a, int *b);
+
 #endif
