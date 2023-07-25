@@ -32,7 +32,7 @@ void counting_sort_r(int *array, size_t size, int exp, int *output)
 
 /**
  * find_max - finds the maximum element in an array of integers
- * @array: the array
+ * @array: the array to check
  * @size: the size of the array
  * Return: the max element of the array
  */
