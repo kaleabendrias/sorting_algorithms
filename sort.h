@@ -4,6 +4,8 @@
 #include <stddef.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <limits.h>
+#include <string.h>
 
 /**
  * struct listint_s - Doubly linked list node
@@ -48,6 +50,8 @@ int partition(int *array, int first, int last, size_t size);
 void swap(int *a, int *b);
 void swap_node(listint_t **list, listint_t *nodeA, listint_t *nodeB);
 void cocktail_sort_list(listint_t **list);
-void raidix_sort(int *array, size_t size);
+void radix_sort(int *array, size_t size);
+void counting_sort(int *array, size_t size, int exp, int *output);
+int find_max(int *array, size_t size);
 
 #endif
