@@ -8,7 +8,7 @@
  * considered in the radix sorting algorithm
  * @output: temporary array holding the sorted elemnts
  */
-void counting_sort(int *array, size_t size, int exp, int *output)
+void counting_sort_r(int *array, size_t size, int exp, int *output)
 {
 	int count[10];
 	size_t i;
@@ -27,7 +27,7 @@ void counting_sort(int *array, size_t size, int exp, int *output)
 	}
 
 	for (i = 0; i < size; i++)
-		array[i] = buff[i];
+		array[i] = output[i];
 }
 
 /**
@@ -70,7 +70,7 @@ void radix_sort(int *array, size_t size)
 	max = find_max(array, size);
 	for (exp = 1; max / exp > 0; exp *= 10)
 	{
-		counting_sort(array, size, exp, output);
+		counting_sort_r(array, size, exp, output);
 		print_array(array, size);
 	}
 	free(output);
