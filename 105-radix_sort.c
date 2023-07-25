@@ -51,6 +51,11 @@ int find_max(int *array, size_t size)
 	return (max);
 }
 
+/**
+ * radix_sort - the radix sort main function
+ * @array: the array to sort using the radix sort algorithm
+ * @size: the size of the array
+ */
 void radix_sort(int *array, size_t size)
 {
 	int max, exp, *output;
