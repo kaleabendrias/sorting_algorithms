@@ -48,5 +48,6 @@ int partition(int *array, int first, int last, size_t size);
 void swap(int *a, int *b);
 void swap_node(listint_t **list, listint_t *nodeA, listint_t *nodeB);
 void cocktail_sort_list(listint_t **list);
+void raidix_sort(int *array, size_t size);
 
 #endif
