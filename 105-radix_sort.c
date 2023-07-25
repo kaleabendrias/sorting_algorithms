@@ -30,6 +30,12 @@ void counting_sort(int *array, size_t size, int exp, int *output)
 		array[i] = buff[i];
 }
 
+/**
+ * find_max - finds the maximum element in an array of integers
+ * @array: the array
+ * @size: the size of the array
+ * Return: the max element of the array
+ */
 int find_max(int *array, size_t size)
 {
 	int max;
