@@ -1,7 +1,7 @@
 #include "sort.h"
 
 /**
- * counting_sort - sorts an array using the radix sort method
+ * counting_sort_r - sorts an array using the radix sort method
  * @array: the array
  * @size: the size of the array
  * @exp: the exponent, keeps track of the position of the digit being
